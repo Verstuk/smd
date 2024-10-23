@@ -37,14 +37,18 @@ const EventCalendar = () => {
   return (
     <div className="bg-white p-4 rounded-md">
 
-      <Calendar onChange={onChange} value={value} />
+      <Calendar 
+      onChange={onChange} 
+      value={value} 
+      locale="ru-RU"
+      />
 
       <div className="flex items-center justify-between pt-5">
         <h1 className="text-2xl font-semibold">События</h1>
         <Image src="/moreDark.png" alt="" width={20} height={20} className="" />
       </div>
 
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 pt-5">
         {events.map((event) => (
           <div key={event.id} className="rounded-md border-2 border-gray-100 border-t-4 odd:border-t-lamaSky even:border-t-lamaPurple">
             <div className="flex items-center justify-between">
